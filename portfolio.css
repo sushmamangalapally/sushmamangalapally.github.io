@@ -1,0 +1,199 @@
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+.nav{
+    text-align: center;
+    word-spacing: 35px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+
+}
+.nav a:link {
+    text-decoration-line: none;
+    word-spacing: 0px;
+    letter-spacing: 1px;
+    color: black;
+
+}
+
+.nav a{
+    text-decoration: none;
+    word-spacing: 0px;
+    letter-spacing: 1px;
+    color:black;
+
+}
+#img1
+{
+    background-image: url("backgrimges/IMG_08561.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 260px;
+    width:100%;
+
+}
+#intro{
+    opacity: 1;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+#intro h1{
+    font-weight: 700;
+    font-size: 75px;
+}
+#intro1{
+    position: relative;
+    top: 20px;
+    padding-top: 20px;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+}
+ img#port{
+     width: 250px;
+     height: 250px;
+     /* position: relative; */
+     /* left: 50px; */
+     float: left;
+     border-radius: 35px;
+     /* display: inline; */
+     /* margin-bottom: 25px; */
+     /* text-align: left; */
+     margin-left: 50px;
+}
+#intro1 h1{
+
+    font-weight: 300;
+    font-size: 75px;
+    text-align: center;
+}
+
+.end{
+    text-align: center;
+}
+.nav button{
+    padding: 0;
+    border: none;
+    background: none;
+    word-spacing: 0px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+button:hover{
+    font-size: 22px;
+    cursor:pointer;
+}
+#pdf{
+    margin: auto;
+}
+
+#email a:link{
+    color: grey;
+    font-size: 55px;
+}
+.projectpics{
+    margin: 30px;
+}
+
+
+
+
+.img12{
+    overflow: hidden;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+.img12 img{
+    float: left;
+    width: 38%;
+    height: 80%;
+    padding: 20px;
+}
+
+.projectpics button {
+    padding: 10px;
+    border: 2px solid black;
+    background: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: no-underline;
+    border-radius: 3px;
+}
+
+.projectpics a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.about{
+    margin: 0 30px;
+    padding: 0 10px;
+    text-align: -webkit-center;
+}
+
+.about p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.about h4{
+    border: 2px solid black;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    /* text-align: center; */
+    width: 300px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.about h3{
+    text-align: center;
+    font-size: 35px;
+}
+
+.education p{
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.education h5{
+    font-size: 25px;
+}
+ h5#minor{
+    font-weight: 400;
+}
+
+.education h6{
+    font-size: 23px;
+    display: inline;
+}
+
+ p#courses {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.sect{
+
+}
