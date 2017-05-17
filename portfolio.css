@@ -7,10 +7,8 @@ body{
     text-align: center;
     word-spacing: 35px;
     text-transform: uppercase;
-    padding-bottom: 30px;
-    padding-top: 30px;
-
-
+    /* padding-bottom: 30px; */
+    /* padding-top: 30px; */
 }
 .nav a:link {
     text-decoration-line: none;
@@ -91,12 +89,18 @@ body{
     word-spacing: 0px;
     letter-spacing: 1px;
     font-size: 18px;
+    height: 50px;
     text-transform: uppercase;
+        padding: 35px 3px;
+        font-weight:600
 
 }
-button:hover{
-    font-size: 22px;
+button:hover, .nav a:link:hover{
+    background-color: #43c1ba;
+    color: white;
+    text-decoration: none;
     cursor:pointer;
+
 }
 #pdf{
     margin: auto;
@@ -124,6 +128,11 @@ button:hover{
     width: 38%;
     height: 80%;
     padding: 20px;
+}
+
+.img12 img:hover{
+    width: 50%;
+    height: 100%;
 }
 
 .projectpics button {
