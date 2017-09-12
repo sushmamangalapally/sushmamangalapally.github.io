@@ -207,6 +207,6 @@ button:hover, .nav a:link:hover{
     text-align: center;
 }
 
-a > #moredetails{
+#moredetails a{
     margin: 50px;
 }
