@@ -203,6 +203,10 @@ button:hover, .nav a:link:hover{
     font-weight: 400;
 }
 
-.sect{
+.moredetails{
+    text-align: center;
+}
 
+a > .moredetails{
+    margin: 50px;
 }
