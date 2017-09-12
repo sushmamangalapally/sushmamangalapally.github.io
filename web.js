@@ -33,7 +33,7 @@ function resume(){
 	$("#port").hide();
 	$('#details').hide();
 	document.getElementById('moredetails').style.padding = "0 100px";
-	document.getElementById('moredetails').innerHTML = "<embed id='pdf' src='Resume_Front-End_public.pdf' width='100%' height='890px'/>";
+	document.getElementById('moredetails').innerHTML = "<embed id='pdf' src='resumesept.pdf' width='100%' height='890px'/>";
 }
 
 function contact(){	
@@ -43,5 +43,5 @@ function contact(){
 	intro2.innerHTML = "Contact";
 	$("#port").hide();
 	$('#details').hide();
-	document.getElementById('moredetails').innerHTML = "<h1 id='email'><a href='mailto:sushma.m812@gmail.com'>sushma.m812@gmail.com</a></h1>";
+	document.getElementById('moredetails').innerHTML = "<a href='mailto:sushma.m812@gmail.com'><img src='mail.png'></a> <a href='https://www.linkedin.com/in/sushmamangalapally/'><img src='ln.png'></a> <a href='https://github.com/sushmamangalapally'><img src='github.png'></a>";
 }
