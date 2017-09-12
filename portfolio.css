@@ -203,10 +203,10 @@ button:hover, .nav a:link:hover{
     font-weight: 400;
 }
 
-.moredetails{
+#moredetails{
     text-align: center;
 }
 
-a > .moredetails{
+a > #moredetails{
     margin: 50px;
 }
