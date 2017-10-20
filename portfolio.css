@@ -210,3 +210,7 @@ button:hover, .nav a:link:hover{
 #moredetails a{
     margin: 50px;
 }
+
+.sect{
+    height: 300px;
+}
