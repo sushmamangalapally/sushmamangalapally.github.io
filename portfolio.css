@@ -24,12 +24,12 @@ nav a:link, #get a:link, a#res{
 }
 
 .card{
-      width: 30%;
-    display: inline-block;
-    vertical-align: top;
-  height: 490px;
-      border: 1px solid #00000040;
-    border-radius: 5px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  height: 600px;
+  border: 1px solid #00000040;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -185,7 +185,7 @@ button:hover, .nav a:link:hover{
     padding: 20px;
 }
 
-img#uniq {
+img#uniq, img#realpage {
   /* height: 50px; */
   /* width: 140px; */
   width: 20%;
@@ -193,7 +193,7 @@ img#uniq {
   vertical-align:  top;
 }
 
-div.uniq{
+div.uniq, div.realpage{
   display:inline-block;
   width: 70%;
 }
@@ -315,23 +315,23 @@ div.uniq{
   font-weight: 400;
 }
 
-.uniq h5{
+.uniq h5, .realpage h5{
     font-size: 14px;
   font-weight: 300;
   margin-bottom: 3px;
 }
 
-.uniq h6{
+.uniq h6, .realpage h6{
     font-size: 14px;
   font-weight: 300;
   margin: 0px;
 }
 
-.uniq li{
+.uniq li, .realpage li{
   list-style: none;
 }
 
-h5#uniq_pos {
+h5#uniq_pos, h5#realpage_pos {
     font-size: 16px;
   font-weight: 400;
   margin-bottom: 3px;
@@ -342,7 +342,7 @@ h5#uniq_pos {
 font-size: 18px;
     text-align: center;
     font-weight: 400;}
-.butt_repo{
+.button_repo{
   text-align:center;
 }
 .edu_bord{
@@ -363,4 +363,8 @@ img.activator{
 
 a#cont{
   margin: 0px;
+}
+
+.card > h4 {
+  text-align: center;
 }
