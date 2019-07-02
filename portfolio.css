@@ -309,12 +309,6 @@ div.uniq, div.realpage{
     margin: 50px;
 }
 
-.img12 h2{
-  font-size: 18px;
-  text-align: center;
-  font-weight: 400;
-}
-
 .uniq h5, .realpage h5{
     font-size: 14px;
   font-weight: 300;
@@ -365,6 +359,17 @@ a#cont{
   margin: 0px;
 }
 
-.card > h4 {
+.card  h5 {
+  text-align: center;
+}
+
+.img12 h2{
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.img12 h3{
+  font-size: 15px;
   text-align: center;
 }
