@@ -373,3 +373,7 @@ a#cont{
   font-size: 15px;
   text-align: center;
 }
+
+.portfolio-img {
+  text-align: center;
+}
