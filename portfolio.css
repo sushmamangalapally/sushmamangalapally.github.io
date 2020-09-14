@@ -325,7 +325,7 @@ div.uniq, div.realpage{
   list-style: none;
 }
 
-h5#uniq_pos, h5#realpage_pos {
+h5#uniq_pos, h5#realpage_pos, h5#imp_pos {
     font-size: 16px;
   font-weight: 400;
   margin-bottom: 3px;
@@ -376,4 +376,10 @@ a#cont{
 
 .portfolio-img {
   text-align: center;
+}
+
+div.imp {
+  vertical-align: top;
+  display: inline-block;
+    width: 70%;
 }
