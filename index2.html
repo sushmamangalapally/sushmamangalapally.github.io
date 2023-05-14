@@ -3,13 +3,9 @@
 
 <head>
     <title>Sushma Mangalapally</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fjord+One&family=Lato:wght@300;400;700;900&family=Lora:ital@1&family=Square+Peg&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" href="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Ffavicon-32x32.png?1515483151686">
 
@@ -17,17 +13,7 @@
 
 <body>
     <div id="app">
-        <div>
-            <headers-section></headers-section>
-
-            <intro-section></intro-section>
-            <aboutme-section></aboutme-section>
-            <experience-section></experience-section>
-            <project-section></project-section>
-            <footer-section></footer-section>
-
-    </div>
-        <!-- <header-section></header-section>
+        <header-section></header-section>
         <intro-section></intro-section>
         <about-section></about-section>
         <experience-section></experience-section>
@@ -35,95 +21,10 @@
         <project-section></project-section>
         <education-section></education-section>
         <footer-section></footer-section>
-        <footer-section-expand></footer-section-expand> -->
+        <footer-section-expand></footer-section-expand>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script>
-        const headers = Vue.component('headers-section', {    
-            data() {
-                return {
-                    headersObj: [
-                        {title: 'about', link: '#about'},
-                        {title: 'experience', link: '#experience'},
-                        {title: 'projects', link: '#projects'},
-                        {title: 'contact', link: '#contact'},
-                    ],
-                    headersArr: ['about','experience','skills','projects','resume','contact']
-                }
-            },
-    
-
-            //language=HTML
-            template: `
-                <header>
-                    <div class="logo">
-                        <img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Ffavicon-32x32.png?1515483151686">
-                    </div>
-                    <nav>
-                        <ul id="navig">
-                            <li v-for="header in headersObj"><a :href="header.link">{{header.title}}</a></li>
-                        </ul>
-                    </nav>
-                </header>
-    
-            `
-        });
-
-const intro = Vue.component('intro-section', {
-    template: `
-    <div>                
-        <div id="intro1">
-            <div class="sect">
-                <div id="details">
-                    <h1>Hello, I'm Sushma.</h1>
-                    <p>I’m a front end developer from San Francisco Bay Area</p>
-                </div>
-                <div class="img-left">
-                    <div class="image-wrapper">
-                        <img id="port" src="./img3.png" alt="Picture of Sushma standing in front of an artwork">
-                    </div>
-
-                </div>
-            </div>
-            
-        </div>
-
-
-        </div>
-    `
-});
-
-const aboutme = Vue.component('aboutme-section', {
-    template: `
-    <div class="main-about">
-        <div id="about">
-            <div class="sect">
-                <div class="details-about">
-                    <h1>About Me</h1>
-                    <p >Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    `
-});
-        Vue.component('interchangeable-section', {
-            components: {
-                headers,
-                intro,
-                aboutme
-            },
-    
-
-            //language=HTML
-            template: `
-                <template>
-                        <intro></intro>
-                        <aboutme></aboutme>
-                </template>
-    
-            `
-        });
         Vue.component('header-section', {
             props: ['headerTitle'],
     
@@ -155,6 +56,20 @@ const aboutme = Vue.component('aboutme-section', {
             `
         });
 
+        Vue.component('intro-section', {
+            template: `                
+                <div id="intro1">
+                    <div class="sect">
+                        <img id="port" src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2FIMG_3212.JPG?1515110273312" alt="Picture of Sushma standing in front of an artwork">
+                        <div id="details">
+                            <h1>Hello, I'm Sushma.</h1>
+
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+
 const headerBackgroundSection = Vue.component('headerBackgroundSection', {
     props: ['headerTitle', 'backgroundLabel'],
     template: `
@@ -174,14 +89,14 @@ Vue.component('about-section', {
     template: `
         <div>
             <span id="about" class="anchor"></span>
-            <section id="about-section">
+            <section>
                 <div id="moredetails">
                     <div class="about">
                         <headerBackgroundSection
                             headerTitle="About Me"
                             backgroundLabel="img1"
                         ></headerBackgroundSection>
-                        <p>Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies! <a id="cont" href="mailto:sushma.m812@gmail.com">Reach out to me!</a></p>
+                        <p>Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. After that, I completed a training from Coding Dojo, where I learned three full-stacks, which are Django (Python), MEAN, and Spring (Java) MVC stacks. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies! <a id="cont" href="mailto:sushma.m812@gmail.com">Reach out to me!</a></p>
                     </div>
                 </div>
             </section>
@@ -190,22 +105,20 @@ Vue.component('about-section', {
 });
 
 const jobSection = Vue.component('jobSection', {
-    props: ['companyTitle', 'companyImgLink', 'companyDescription', 'jobTitleDescription', 'jobDesc', 'jobDescription', 'jobTechSkills'],
+    props: ['companyTitle', 'companyImgLink', 'companyDescription', 'jobTitleDescription', 'jobDesc'],
     template: `
-            <div class="job-section">
-                <div class="img-job-section">
-                    <img :id="companyTitle" :src="companyImgLink" alt=" Logo">
-                </div>
+            <div class="img12 projectpics">
+                <h2>{{companyTitle}}</h2>
+                <img :id="companyTitle" :src="companyImgLink" alt=" Logo">
                 <div class="imp">
-                    <h2>{{jobTitleDescription}}</h2>
-                    <h5 class="job-title">{{companyTitle}}</h5>
+                    <h5><i>
+                        {{companyDescription}}
+                    </i></h5>
+                    <h5 class="job-title">{{jobTitleDescription}}</h5>
 
-                    <p>{{jobDescription}}</p>
-                    <div class="job-tags">
-                        <div class="tag" v-for="item in jobTechSkills">
-                            <span>{{item}}</span>
-                        </div>
-                    </div>
+                    <ul>
+                        <li v-for="item in jobDesc">{{item}}</li>
+                    </ul>
                 </div>
             </div>
     `
@@ -217,13 +130,13 @@ Vue.component('experience-section', {
     headerBackgroundSection
   },
     template: `
-        <div class="main-experience">
-            <section class="experience-section">
-            <span id="experience" class="anchor"></span>
+        <div>
+            <span id="about" class="anchor"></span>
+            <section>
                 <div id="moredetails">
                     <div class="about">
                         <headerBackgroundSection
-                            headerTitle="Experience/Education"
+                            headerTitle="Experience"
                             backgroundLabel="img4"
                         ></headerBackgroundSection>
                         <jobSection
@@ -231,8 +144,6 @@ Vue.component('experience-section', {
                             companyImgLink="https://assets.website-files.com/5a0242c3d47dd70001e5b2e9/5cac60e3f8d44d025118d7fa_medium.svg"
                             companyDescription="Zendesk provides software-as-a-service products related to customer support, sales, and other customer communications."
                             jobTitleDescription="Front End Developer: April 2021 - Present."
-                            jobDescription=""
-                            :jobTechSkills="['VueJS']"
                         ></jobSection>
                         <jobSection
                             companyTitle="Import.io"
@@ -240,8 +151,6 @@ Vue.component('experience-section', {
                             companyDescription="import.io is a Web Data Integration platform that provides global businesses with high-quality, scalable data from the web."
                             jobTitleDescription="Junior Delivery Engineer: May 2020 - April 2021."
                             :jobDesc="['Developed quality, cleaned code to provide web data extraction services for clients for competitive analysis using modern vanilla JavaScript, XPath, and CSS selectors', 'Supported and maintained re-usable internal libraries for future use', 'Utilized Puppeteer (Node.js), DOMs manipulation, Postman, YAML, RegEx, CSS, and SQL','Utilized application logic to fetch data from various third-party APIs','Assisted in project management work']"
-                            jobDescription="Develop quality, clean up code to provide web data extraction services for clients for competitive analysis. Support and maintain re-usable internal libraries for future use. Utilize application logic to fetch data from various third-oarty APIs. Assist in project management work."
-                            :jobTechSkills="['ES6 JavaScript', 'XPath', 'CSS', 'Puppeteer (Node.js)', 'DOMs manipulation', 'Postman', 'YAML', 'RegEx', 'SQL']"
                         ></jobSection>
                         <jobSection
                             companyTitle="RealPage"
@@ -249,25 +158,13 @@ Vue.component('experience-section', {
                             companyDescription="RealPage is on-demand multifamily property management software for the apartment communities."
                             jobTitleDescription="Document Design Developer: April 2018 - March 2020."
                             :jobDesc="['Coded in XML, JavaScript, SQL, jQuery and Java by developing a dynamic and customizable software solutions to match the needs of the clients', 'Supported and maintained JavaScript library used by internal team','Worked with QA/IC team to understand clients’ expectations','Improved and fixed internal tools using Ruby and Ruby on Rails','Managed tickets/active branch using Jira and GIT version control','Debugged, maintained, and improved various software solutions']"
-                            jobDescription="Develop a dynamic and customizable software solutions to match the needs of the clients. Support and maintain JavaScript library used by internal team. Improve and debug internal tools used by the team."
-                            :jobTechSkills="['XML', 'JavaScript', 'SQL', 'jQuery', 'Java', 'JSP', 'JUnit', 'Ruby', 'Ruby on Rails', 'RSpec']"
                         ></jobSection>
                         <jobSection
                             companyTitle="Uniquify"
-                            companyImgLink="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1450261292/bvmrnnhngphyxvmlnpka.png"
+                            companyImgLink="https://i0.wp.com/www10.edacafe.com/blogs/dispatchesfromboston/files/2013/05/Uniquify-logo.jpg"
                             companyDescription="Uniquify is a System-on-Chip (SoC) product company. It offers SoC design expertise, integration and manufacturing services to leading semiconductor and system companies worldwide."
                             jobTitleDescription="Web Developer Intern : October 2017 - March 2018."
                             :jobDesc="['Building internal website.','Designed and developed web pages using HTML/CSS, JavaScript and jQuery','Developed SQLite and Perl backend for dynamic database driven website','Developed interactive GUIs and displayed statistical graphs and charts','Resolved site stability issues, improved site performance, and translated design wireframes into code']"
-                            jobDescription="Design and develop web pages. Perform database development activities. Develop interactive GUIs and display statistical graphs/charts. Resolve site stability issues, improve site performance, and translate mockups into code."
-                            :jobTechSkills="['HTML', 'CSS', 'JavaScript', 'jQuery', 'SQLite', 'Perl', 'HighchartsJS']"
-                        ></jobSection>
-                        <jobSection
-                            companyTitle="Santa Clara University"
-                            companyImgLink="https://cdn.glitch.me/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fsculogo.svg.png"
-                            companyDescription=""
-                            jobTitleDescription="Bachelor of Science in Computer Science. 2013 - 2017"
-                            :jobDesc="['Building internal website.','Designed and developed web pages using HTML/CSS, JavaScript and jQuery','Developed SQLite and Perl backend for dynamic database driven website','Developed interactive GUIs and displayed statistical graphs and charts','Resolved site stability issues, improved site performance, and translated design wireframes into code']"
-                            jobDescription="Minored in mathematics."
                         ></jobSection>
                     </div>
                 </div>
@@ -320,52 +217,18 @@ const project = Vue.component('project', {
     template: `
 
         <div class="img12 card">
-            <template v-if="projectTitle === 'Open Weather App'">
-                
-                <div class="proj-image is-mobile">
-                    <img alt="Screenshot" :src="projectImgLink" class="activator">
-                </div>
-                <div class="show-card">
-                    <h2>{{projectTitle}}</h2>
-                    <h3>{{projectDescription}}</h3>
-                    <h5><b>Technologies Used:</b>  <div v-html="splitProject(projectTechDesc, projectTitle)"></div></h5>
-                    <div class="button_repo">
-                        <a href="projectGithubLink">Repo</a>
-                        <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
-                    </div>
-                </div>
-                <div class="proj-image not-a-mobile">
-                    <img alt="Screenshot" :src="projectImgLink" class="activator">
-                </div>
-            </template>
-            <template v-else>
-                <div class="proj-image">
-                    <img alt="Screenshot" :src="projectImgLink" class="activator">
-                </div>
-                <div class="show-card">
-                    <h2>{{projectTitle}}</h2>
-                    <h3>{{projectDescription}}</h3>
-                    <h5><b>Technologies Used:</b> <div v-html="splitProject(projectTechDesc, projectTitle)"></div></h5>
-                    <div class="button_repo">
-                        <a href="projectGithubLink">Repo</a>
-                        <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
-                    </div>
-                </div>
-            </template>
+            <img alt="Screenshot" :src="projectImgLink" class="activator">
+            <div class="show_card">
+                <h2>{{projectTitle}}</h2>
+                <h3>{{projectDescription}}</h3>
+                <h5><b>Technologies Used:</b> {{projectTechDesc}}.</h5>
+            </div>
+            <div class="button_repo">
+                <a href="projectGithubLink">Repo</a>
+                <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
             </div>
         </div>
-    `,
-    methods: {
-        splitProject(projectTechDesc, projectTitle) {
-            console.log(projectTitle)
-            console.log(projectTechDesc)
-            const desc = projectTechDesc.split(',');
-            const m = desc.map((e) => '<div class="tag"><span>'+e.trim()+'</span></div>')
-            console.log(m)
-
-            return m.join('')
-        }
-    }
+    `
 });
 
 Vue.component('project-section', {
@@ -373,8 +236,8 @@ Vue.component('project-section', {
     headerBackgroundSection
   },
     template: `
-        <div class="main-project">
-            <span id="projects" class="anchor"></span>
+        <div>
+            <span id="about" class="anchor"></span>
             <section>
                 <div id="moredetails">
                     <div class="about">
@@ -426,9 +289,9 @@ Vue.component('education-section', {
                         <div class="img12">
                             <div class="education projectpics">
                                 <div class="edu_bord">
+                                    <p>Santa Clara University</p>
                                     <img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fsculogo.svg.png?1515110243048" alt="Santa Clara University Logo" height="100" width="100">
                                     <div class="scu">
-                                        <p>Santa Clara University</p>
                                         <h5>Bachelor of Science in Computer Science</h5>
                                         <h5 id="minor">Minor in Mathematics</h5>
                                     </div>
@@ -444,14 +307,16 @@ Vue.component('education-section', {
     
     Vue.component('footer-section', {
         template: `
-            <div class="footer-section">
+            <div>
                 <span id="contact" class="anchor"></span>
                 <section>
-                    <div class="gettouch">
-                        <h3>Get in Touch 👋</h3>
-                        <a href="mailto:sushma.m812@gmail.com">Email me at sushma.m812@gmail.com</a>
-                        <a href="https://www.linkedin.com/in/sushmamangalapally/">Let's connect on LinkedIn</a>
-                        <a href="https://github.com/sushmamangalapally">Visit My Github</a>
+                    <div id="get">
+                        <a href="mailto:sushma.m812@gmail.com"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fmail.png?1515110223684" alt="Email Icon" height="50" width="50">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sushmamangalapally/"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fln.png?1515110248375" alt="LinkedIn Logo" height="50" width="50">
+                        </a>
+                        <a href="https://github.com/sushmamangalapally"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fgithub.png?1515123184971" alt="Github Logo" height="50" width="50">
+                        </a>
                     </div>
                 </section>
             </div>
