@@ -118,11 +118,11 @@ header, #intro1 {
 }
 
 img#port {
-  width: 58%;
+  /* width: 58%;
   height: 425px;
-  width: 77%;
+  width: 77%; */
   height: 425px;
-  width: 93%;
+  /* width: 93%; */
   /* height: 425px;
   width: 72%; */
 }
