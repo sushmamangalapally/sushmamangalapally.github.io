@@ -515,7 +515,7 @@ img#uniq, img#realpage {
     }
   }
 
-  @media screen and (min-width: 599px) {
+  @media screen and (max-width: 599px) {
 
   .proj-image {
     width: 100%;
