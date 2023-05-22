@@ -562,4 +562,30 @@ img#uniq, img#realpage {
           padding: 10px;
           margin: 0px;
       }
+      .not-a-mobile {
+        display: none;
+      }
+      .is-mobile {
+        display: inline-block;
+      }
+  }
+
+
+
+    @media only screen and (max-width: 900px) {
+      .proj-image {
+          width: 100%;
+          /* height: 74vh; */
+      }
+      .show-card {
+          width: 92%;
+          padding: 10px;
+          margin: 0px;
+      }
+      .not-a-mobile {
+        display: none;
+      }
+      .is-mobile {
+        display: inline-block;
+      }
   }
