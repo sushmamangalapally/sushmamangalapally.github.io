@@ -296,6 +296,7 @@ img#uniq, img#realpage {
 .tag span {
   vertical-align: -webkit-baseline-middle;
   font-size: 12px;
+  font-size: 20px;
 }
 
 .job-title {
@@ -338,6 +339,7 @@ img#uniq, img#realpage {
 .show-card h3, .show-card h5, .show-card {
   font-family: 'Fjord One';
   font-size: 13px;
+  font-size: 20px;
 }
 
 .button_repo a {
