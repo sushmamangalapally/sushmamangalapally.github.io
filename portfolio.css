@@ -259,6 +259,7 @@ img#uniq, img#realpage {
 .job-section img {
   /* width: 18%; */
   /* height: 18%; */
+  max-height: 200px;
   padding: 20px;
   width: 55%;
 }
@@ -492,6 +493,7 @@ img#uniq, img#realpage {
         margin-right: 20px;
         list-style: none;
         display: inline-block;
+        font-size: 12px;
     }
     nav {
         word-spacing: 35px;
@@ -519,6 +521,15 @@ img#uniq, img#realpage {
     }
     .tag span {
       font-size: 1.5em;
+    }
+    #details {
+      width: 100%;
+    }
+    .img-left {
+      display: none;
+    }
+    .img-job-section {
+      width: 100%;
     }
   }
 
