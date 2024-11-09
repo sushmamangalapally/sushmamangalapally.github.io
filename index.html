@@ -3,15 +3,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sushma Mangalapally</title>
-    <!-- <link :href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
-    <link rel="preconnect" :href="https://fonts.googleapis.com">
-    <link rel="preconnect" :href="https://fonts.gstatic.com" crossorigin>
-    <link :href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fjord+One&family=Lato:wght@300;400;700;900&family=Lora:ital@1&family=Square+Peg&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fjord+One&family=Lato:wght@300;400;700;900&family=Lora:ital@1&family=Square+Peg&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="script.js"></script> -->
-    <link rel="stylesheet" :href="portfolio.css">
-    <link rel="icon" :href="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Ffavicon-32x32.png?1515483151686">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" href="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Ffavicon-32x32.png?1515483151686">
 
 </head>
 
@@ -61,7 +61,7 @@
                     </div>
                     <nav>
                         <ul id="navig">
-                            <li v-for="header in headersObj"><a ::href="header.link">{{header.title}}</a></li>
+                            <li v-for="header in headersObj"><a :href="header.link">{{header.title}}</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -147,7 +147,7 @@ const aboutme = Vue.component('aboutme-section', {
                 <header>
                     <nav>
                         <ul id="navig">
-                            <li v-for="header in headersObj"><a ::href="header.link">{{header.title}}</a></li>
+                            <li v-for="header in headersObj"><a :href="header.link">{{header.title}}</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -181,7 +181,7 @@ Vue.component('about-section', {
                             headerTitle="About Me"
                             backgroundLabel="img1"
                         ></headerBackgroundSection>
-                        <p>Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies! <a id="cont" :href="mailto:sushma.m812@gmail.com">Reach out to me!</a></p>
+                        <p>Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies! <a id="cont" href="mailto:sushma.m812@gmail.com">Reach out to me!</a></p>
                     </div>
                 </div>
             </section>
@@ -449,9 +449,9 @@ Vue.component('education-section', {
                 <section>
                     <div class="gettouch">
                         <h3>Get in Touch 👋</h3>
-                        <a :href="mailto:sushma.m812@gmail.com">Email me at sushma.m812@gmail.com</a>
-                        <a :href="https://www.linkedin.com/in/sushmamangalapally/">Let's connect on LinkedIn</a>
-                        <a :href="https://github.com/sushmamangalapally">Visit My Github</a>
+                        <a href="mailto:sushma.m812@gmail.com">Email me at sushma.m812@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/sushmamangalapally/">Let's connect on LinkedIn</a>
+                        <a href="https://github.com/sushmamangalapally">Visit My Github</a>
                     </div>
                 </section>
             </div>
