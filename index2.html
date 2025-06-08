@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sushma Mangalapally</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" href="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Ffavicon-32x32.png?1515483151686">
+
+</head>
+
+<body>
+    <div id="app">
+        <header-section></header-section>
+        <intro-section></intro-section>
+        <about-section></about-section>
+        <experience-section></experience-section>
+        <skills-section></skills-section>
+        <project-section></project-section>
+        <education-section></education-section>
+        <footer-section></footer-section>
+        <footer-section-expand></footer-section-expand>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+        Vue.component('header-section', {
+            props: ['headerTitle'],
+    
+            data() {
+                return {
+                    headersObj: [
+                        {title: 'about', link: '#about'},
+                        {title: 'experience', link: '#experience'},
+                        {title: 'skills', link: '#skills'},
+                        {title: 'projects', link: '#projects'},
+                        {title: 'resume', link: '#resume'},
+                        {title: 'contact', link: '#contact'},
+                    ],
+                    headersArr: ['about','experience','skills','projects','resume','contact']
+                }
+            },
+    
+
+            //language=HTML
+            template: `
+                <header>
+                    <nav>
+                        <ul id="navig">
+                            <li v-for="header in headersObj"><a :href="header.link">{{header.title}}</a></li>
+                        </ul>
+                    </nav>
+                </header>
+    
+            `
+        });
+
+        Vue.component('intro-section', {
+            template: `                
+                <div id="intro1">
+                    <div class="sect">
+                        <img id="port" src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2FIMG_3212.JPG?1515110273312" alt="Picture of Sushma standing in front of an artwork">
+                        <div id="details">
+                            <h1>Hello, I'm Sushma.</h1>
+
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+
+const headerBackgroundSection = Vue.component('headerBackgroundSection', {
+    props: ['headerTitle', 'backgroundLabel'],
+    template: `
+        <div class="back-img" :id="backgroundLabel">
+            <div class="intro">
+                <h1 class="name">{{headerTitle}}</h1>
+            </div>
+        </div>
+    `
+});
+
+
+Vue.component('about-section', {
+  components: {
+    headerBackgroundSection
+  },
+    template: `
+        <div>
+            <span id="about" class="anchor"></span>
+            <section>
+                <div id="moredetails">
+                    <div class="about">
+                        <headerBackgroundSection
+                            headerTitle="About Me"
+                            backgroundLabel="img1"
+                        ></headerBackgroundSection>
+                        <p>Hello! My name is Sushma, and I am a software developer. I am from the San Francisco Bay Area. I graduated from SCU with a bachelor's degree in computer science. After that, I completed a training from Coding Dojo, where I learned three full-stacks, which are Django (Python), MEAN, and Spring (Java) MVC stacks. I am interested in building web applications and UI of the web apps. I am a highly motivated team player as I am always reliable and dependable. I am a curious person who asks a lot of questions and am eager to learn new technologies! <a id="cont" href="mailto:sushma.m812@gmail.com">Reach out to me!</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    `
+});
+
+const jobSection = Vue.component('jobSection', {
+    props: ['companyTitle', 'companyImgLink', 'companyDescription', 'jobTitleDescription', 'jobDesc'],
+    template: `
+            <div class="img12 projectpics">
+                <h2>{{companyTitle}}</h2>
+                <img :id="companyTitle" :src="companyImgLink" alt=" Logo">
+                <div class="imp">
+                    <h5><i>
+                        {{companyDescription}}
+                    </i></h5>
+                    <h5 class="job-title">{{jobTitleDescription}}</h5>
+
+                    <ul>
+                        <li v-for="item in jobDesc">{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+    `
+});
+
+
+Vue.component('experience-section', {
+  components: {
+    headerBackgroundSection
+  },
+    template: `
+        <div>
+            <span id="about" class="anchor"></span>
+            <section>
+                <div id="moredetails">
+                    <div class="about">
+                        <headerBackgroundSection
+                            headerTitle="Experience"
+                            backgroundLabel="img4"
+                        ></headerBackgroundSection>
+                        <jobSection
+                            companyTitle="Zendesk"
+                            companyImgLink="https://assets.website-files.com/5a0242c3d47dd70001e5b2e9/5cac60e3f8d44d025118d7fa_medium.svg"
+                            companyDescription="Zendesk provides software-as-a-service products related to customer support, sales, and other customer communications."
+                            jobTitleDescription="Front End Developer: April 2021 - Present."
+                        ></jobSection>
+                        <jobSection
+                            companyTitle="Import.io"
+                            companyImgLink="https://upload.wikimedia.org/wikipedia/commons/1/12/Import-Logo-1.png"
+                            companyDescription="import.io is a Web Data Integration platform that provides global businesses with high-quality, scalable data from the web."
+                            jobTitleDescription="Junior Delivery Engineer: May 2020 - April 2021."
+                            :jobDesc="['Developed quality, cleaned code to provide web data extraction services for clients for competitive analysis using modern vanilla JavaScript, XPath, and CSS selectors', 'Supported and maintained re-usable internal libraries for future use', 'Utilized Puppeteer (Node.js), DOMs manipulation, Postman, YAML, RegEx, CSS, and SQL','Utilized application logic to fetch data from various third-party APIs','Assisted in project management work']"
+                        ></jobSection>
+                        <jobSection
+                            companyTitle="RealPage"
+                            companyImgLink="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_131abfc83d3bb3fc8eda00882bf07b3a/realpage.png"
+                            companyDescription="RealPage is on-demand multifamily property management software for the apartment communities."
+                            jobTitleDescription="Document Design Developer: April 2018 - March 2020."
+                            :jobDesc="['Coded in XML, JavaScript, SQL, jQuery and Java by developing a dynamic and customizable software solutions to match the needs of the clients', 'Supported and maintained JavaScript library used by internal team','Worked with QA/IC team to understand clients’ expectations','Improved and fixed internal tools using Ruby and Ruby on Rails','Managed tickets/active branch using Jira and GIT version control','Debugged, maintained, and improved various software solutions']"
+                        ></jobSection>
+                        <jobSection
+                            companyTitle="Uniquify"
+                            companyImgLink="https://i0.wp.com/www10.edacafe.com/blogs/dispatchesfromboston/files/2013/05/Uniquify-logo.jpg"
+                            companyDescription="Uniquify is a System-on-Chip (SoC) product company. It offers SoC design expertise, integration and manufacturing services to leading semiconductor and system companies worldwide."
+                            jobTitleDescription="Web Developer Intern : October 2017 - March 2018."
+                            :jobDesc="['Building internal website.','Designed and developed web pages using HTML/CSS, JavaScript and jQuery','Developed SQLite and Perl backend for dynamic database driven website','Developed interactive GUIs and displayed statistical graphs and charts','Resolved site stability issues, improved site performance, and translated design wireframes into code']"
+                        ></jobSection>
+                    </div>
+                </div>
+            </section>
+        </div>
+    `
+});
+
+
+Vue.component('skills-section', {
+    data() {
+        return {
+            skills: [
+                'JavaScript (ES6)',
+                'VueJS',
+                'jQuery',
+                'JSON',
+                'HTML5/CSS3',
+                'Twitter Bootstrap',
+                'PHP',
+                'MongoDB',
+                'MySQL',
+                'SQL',
+                'Wordpress and Content Management System',
+            ]
+        }
+  },
+    template: `
+        <div>
+            <span id="skills" class="anchor"></span>
+            <section>
+                <div id="moredetails">
+                    <div class="about">
+                        <headerBackgroundSection
+                            headerTitle="Skills"
+                            backgroundLabel="img7"
+                        ></headerBackgroundSection>
+                        <div class="skills">
+                            <h4 v-for="skill in skills">{{skill}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    `
+});
+
+const project = Vue.component('project', {
+    props: ['projectImgLink', 'projectTitle', 'projectDescription', 'projectTechDesc', 'projectGithubLink','projectLiveLink'],
+    template: `
+
+        <div class="img12 card">
+            <img alt="Screenshot" :src="projectImgLink" class="activator">
+            <div class="show_card">
+                <h2>{{projectTitle}}</h2>
+                <h3>{{projectDescription}}</h3>
+                <h5><b>Technologies Used:</b> {{projectTechDesc}}.</h5>
+            </div>
+            <div class="button_repo">
+                <a href="projectGithubLink">Repo</a>
+                <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
+            </div>
+        </div>
+    `
+});
+
+Vue.component('project-section', {
+  components: {
+    headerBackgroundSection
+  },
+    template: `
+        <div>
+            <span id="about" class="anchor"></span>
+            <section>
+                <div id="moredetails">
+                    <div class="about">
+                        <headerBackgroundSection
+                            headerTitle="Projects"
+                            backgroundLabel="img2"
+                        ></headerBackgroundSection>
+                        <project
+                            projectTitle="Photo Collage"
+                            projectImgLink="https://raw.githubusercontent.com/sushmamangalapally/hallmark-collage/master/Photo%20Collage%20Screenshot1.png"
+                            projectDescription="Built a SPA that uses ReactJS, HTML5 canvas, & the Unsplash API to create downloadable photo collage and customize."
+                            projectTechDesc="ReactJS, JSX, Materialize CSS"
+                            projectGithubLink="https://github.com/sushmamangalapally/hallmark-collage"
+                            projectLiveLink="https://sushmamangalapally.github.io/hallmark-collage/"
+                        ></project>
+                        <project
+                            projectTitle="Open Weather App"
+                            projectImgLink="https://raw.githubusercontent.com/sushmamangalapally/open-weather/master/ScreenShot.png"
+                            projectDescription="A web application that provides current weather information, daily forecast, and data visualization of forecast timeline."
+                            projectTechDesc="Vue.js, Java Spring, Highcharts JS, Bootstrap"
+                            projectGithubLink="https://github.com/sushmamangalapally/open-weather"
+                            projectLiveLink=""
+                        ></project>
+                        <project
+                            projectTitle="Watch More Films"
+                            projectImgLink="https://raw.githubusercontent.com/sushmamangalapally/MovieReviews/master/2hob7j.gif"
+                            projectDescription="Built a web application for users to rate the movies and have ability to have list of favorite movies and movies to watch. Fetch data from The Movies DB API."
+                            projectTechDesc="ReactJS, JSX, Materialize CSS"
+                            projectGithubLink="https://github.com/sushmamangalapally/MovieReviews"
+                        ></project>
+                    </div>
+                </div>
+            </section>
+        </div>
+    `
+});
+    
+Vue.component('education-section', {
+    template: `
+        <div>
+            <span id="education" class="anchor"></span>
+            <section>
+                <div id="moredetails">
+                    <div class="about">
+                        <headerBackgroundSection
+                            headerTitle="Education"
+                            backgroundLabel="img6"
+                        ></headerBackgroundSection>
+                        <div class="img12">
+                            <div class="education projectpics">
+                                <div class="edu_bord">
+                                    <p>Santa Clara University</p>
+                                    <img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fsculogo.svg.png?1515110243048" alt="Santa Clara University Logo" height="100" width="100">
+                                    <div class="scu">
+                                        <h5>Bachelor of Science in Computer Science</h5>
+                                        <h5 id="minor">Minor in Mathematics</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    `
+});
+    
+    Vue.component('footer-section', {
+        template: `
+            <div>
+                <span id="contact" class="anchor"></span>
+                <section>
+                    <div id="get">
+                        <a href="mailto:sushma.m812@gmail.com"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fmail.png?1515110223684" alt="Email Icon" height="50" width="50">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sushmamangalapally/"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fln.png?1515110248375" alt="LinkedIn Logo" height="50" width="50">
+                        </a>
+                        <a href="https://github.com/sushmamangalapally"><img src="https://cdn.glitch.com/4c8884cd-c732-4de8-a83a-3fb8edae32ec%2Fgithub.png?1515123184971" alt="Github Logo" height="50" width="50">
+                        </a>
+                    </div>
+                </section>
+            </div>
+        `
+    });
+    
+    Vue.component('footer-section-expand', {
+        template: `
+            <div>
+                <hr>
+                <div class="end">
+                    <p>Developed by Sushma Mangalapally</p>
+                    <p>&copy; 2015-2022</p>
+                </div>
+            </div>
+        `
+    });
+        const app = new Vue({
+            el: '#app'
+        });
+    </script>
+    
+</body>
+
+</html>

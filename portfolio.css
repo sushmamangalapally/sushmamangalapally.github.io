@@ -446,6 +446,54 @@ img#uniq, img#realpage {
       width: 21%;
   }
 
+  @media screen and (max-width: 600px) {
+      .proj-image {
+          width: 100%;
+          /* height: 74vh; */
+      }
+      .show-card {
+          width: 92%;
+          padding: 10px;
+          margin: 0px;
+      }
+      .is-mobile {
+          display: inline-block;
+      }
+      .not-a-mobile {
+          display: none;
+      }
+
+      #navig li {
+          margin-right: 20px;
+          list-style: none;
+          display: inline-block;
+      }
+      nav {
+          word-spacing: 35px;
+          text-transform: uppercase;
+          width: 76%;
+          padding: 10px;
+      }
+      .logo {
+          width: 10%;
+          display: inline-block;
+          padding: 10px;
+      }
+      .logo img {
+          width: 85%;
+      }
+      #details h1 {
+          font-size: 70px;
+      }
+      #details p {
+          font-size: 20px;
+      }
+      img#port {
+          height: 335px;
+          width: 100%;
+      }
+    }
+
     @media only screen and (min-width: 600px) and (max-width: 850px) {
       nav {
           word-spacing: 35px;
@@ -461,74 +509,6 @@ img#uniq, img#realpage {
     }
 
     
-
-  @media screen and (max-width: 600px) {
-    .proj-image {
-        width: 100%;
-        /* height: 74vh; */
-    }
-    .show-card {
-        width: 92%;
-        padding: 10px;
-        margin: 0px;
-    }
-    .is-mobile {
-        display: inline-block;
-    }
-    .not-a-mobile {
-        display: none;
-    }
-
-    #navig li {
-        margin-right: 20px;
-        list-style: none;
-        display: inline-block;
-    }
-    nav {
-        word-spacing: 35px;
-        text-transform: uppercase;
-        width: 76%;
-        padding: 10px;
-    }
-    .logo {
-        width: 10%;
-        display: inline-block;
-        padding: 10px;
-    }
-    .logo img {
-        width: 85%;
-    }
-    #details h1 {
-        font-size: 70px;
-    }
-    #details p {
-        font-size: 20px;
-    }
-    img#port {
-        height: 335px;
-        width: 100%;
-    }
-    .tag span {
-      font-size: 1.5em;
-    }
-  }
-
-  @media screen and (min-width: 599px) {
-
-  .proj-image {
-    width: 100%;
-  }
-  .show-card {
-    width: 100%;
-  }
-  .show-card h3, .show-card h5, .show-card {
-    font-size: 1.25em;
-  }
-  .tag span {
-    font-size: 1.25em;
-
-  }
-}
 
 
     #navig li a:visited {
