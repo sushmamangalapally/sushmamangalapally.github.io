@@ -224,8 +224,8 @@ const project = Vue.component('project', {
                 <h5><b>Technologies Used:</b> {{projectTechDesc}}.</h5>
             </div>
             <div class="button_repo">
-                <a href="projectGithubLink">Repo</a>
-                <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
+                <a :href="projectGithubLink">Repo</a>
+                <a v-if="projectLiveLink && projectLiveLink.length" :href="projectLiveLink">Live</a>
             </div>
         </div>
     `

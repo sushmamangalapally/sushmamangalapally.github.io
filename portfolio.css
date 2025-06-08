@@ -119,9 +119,9 @@ header, #intro1 {
 img#port {
   width: 58%;
   height: 425px;
-  width: 77%;
+  /* width: 77%; */
   height: 425px;
-  width: 93%;
+  /* width: 93%; */
   /* height: 425px;
   width: 72%; */
 }
@@ -262,7 +262,7 @@ img#uniq, img#realpage {
 }
 
 .img-job-section {
-  /* width: 29%; */
+  width: 29%;
   vertical-align: top;
 }
 
