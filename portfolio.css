@@ -446,7 +446,7 @@ img#uniq, img#realpage {
       width: 21%;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1080px) {
       .proj-image {
           width: 100%;
           /* height: 74vh; */
