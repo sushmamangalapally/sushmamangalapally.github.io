@@ -347,8 +347,8 @@ const project = Vue.component('project', {
                     <h3>{{projectDescription}}</h3>
                     <h5><b>Technologies Used:</b> <div v-html="splitProject(projectTechDesc, projectTitle)"></div></h5>
                     <div class="button_repo">
-                        <a href="projectGithubLink">Repo</a>
-                        <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
+                        <a :href="projectGithubLink">Repo</a>
+                        <a v-if="projectLiveLink && projectLiveLink.length" :href="projectLiveLink">Live</a>
                     </div>
                 </div>
             </template>
