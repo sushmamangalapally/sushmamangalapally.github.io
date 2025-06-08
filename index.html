@@ -230,8 +230,8 @@ Vue.component('experience-section', {
                             companyTitle="Zendesk"
                             companyImgLink="https://assets.website-files.com/5a0242c3d47dd70001e5b2e9/5cac60e3f8d44d025118d7fa_medium.svg"
                             companyDescription="Zendesk provides software-as-a-service products related to customer support, sales, and other customer communications."
-                            jobTitleDescription="Front End Developer: April 2021 - Present."
-                            jobDescription=""
+                            jobTitleDescription="Front End Developer: April 2021 - November 2024."
+                            jobDescription="Developed and maintained custom web applications and help center pages for clients utilizing VueJS, ReactJS, HTML5, CSS3, JavaScript, Figma, external/internal API integration and other web/design technologies"
                             :jobTechSkills="['VueJS']"
                         ></jobSection>
                         <jobSection
@@ -330,7 +330,7 @@ const project = Vue.component('project', {
                     <h3>{{projectDescription}}</h3>
                     <h5><b>Technologies Used:</b>  <div v-html="splitProject(projectTechDesc, projectTitle)"></div></h5>
                     <div class="button_repo">
-                        <a href="projectGithubLink">Repo</a>
+                        <a :href="projectGithubLink">Repo</a>
                         <a v-if="projectLiveLink && projectLiveLink.length" href="projectLiveLink">Live</a>
                     </div>
                 </div>
